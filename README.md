@@ -35,11 +35,11 @@ For ease of CI/CD, we will put Laravel files in */src* path, so the project file
 2. Initialise Laravel project with project name as "src": `curl -s "https://laravel.build/src" | bash`
 3. Upsert following environment variables in *.env* and *.env.example*:
    ```dotenv
-    APP_NAME=[YOUR_PROJECT_NAME]
-    APP_URL=http://localhost
+    APP_NAME=   # your application name. such as "Laravel Sample"
+    APP_URL=    # Application URL. such as http://laravel-sample.test
 
     DB_HOST=mysql
-    DB_DATABASE=[YOUR_DATABASE_NAME]
+    DB_DATABASE=    # your database name, such as laravel-sample
     DB_USERNAME=root
     DB_PASSWORD=
 
@@ -47,7 +47,7 @@ For ease of CI/CD, we will put Laravel files in */src* path, so the project file
 
     REDIS_HOST=redis
 
-    COMPOSE_PROJECT_NAME=[DOCKER_CONTAINER_NAME]
+    COMPOSE_PROJECT_NAME= # Docker container name, such as laravel-sample
    ```
 4. Create a database with the same name as `DB_DATABASE` environment value
 5. Start application with: `cd src && ./vendor/bin/sail up -d`. (It is recommended to add a zsh/bash alias `sail` to
