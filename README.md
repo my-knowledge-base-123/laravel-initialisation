@@ -39,6 +39,7 @@ For ease of CI/CD, we will put Laravel files in */src* path, so the project file
     APP_URL=http://localhost
 
     DB_HOST=mysql
+    DB_DATABASE=[YOUR_DATABASE_NAME]
     DB_USERNAME=root
     DB_PASSWORD=
 
@@ -48,5 +49,13 @@ For ease of CI/CD, we will put Laravel files in */src* path, so the project file
 
     COMPOSE_PROJECT_NAME=[DOCKER_CONTAINER_NAME]
    ```
-4. Start application with: `cd src && ./vendor/bin/sail up -d`. (It is recommended to add a zsh/bash alias `sail` to replace `./vendor/bin/sail`)
-5. Now you can build something incredible! For more development guide: see [Development Standards - Laravel](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/development-standards.md)
+4. Create a database with the same name as `DB_DATABASE` environment value
+5. Start application with: `cd src && ./vendor/bin/sail up -d`. (It is recommended to add a zsh/bash alias `sail` to
+   replace `./vendor/bin/sail`. See
+   how: [Configure A Shell Alisa](https://laravel.com/docs/9.x/sail#configuring-a-shell-alias))
+6. Run `sail shell` to access the container CLI
+7. Run `php artisan migrate` to migrate tables to the new database
+8. Now you can build something incredible! For more development guide:
+   see [Development Standards - Laravel](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/development-standards.md)
+9. Write *README.md* in the root path by
+   following [Documentation Standards](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/project-documentation-standards.md)
