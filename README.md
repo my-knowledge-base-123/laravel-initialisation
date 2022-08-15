@@ -24,11 +24,11 @@ For ease of CI/CD, we will put Laravel files in */src* path, so the project file
 ```text
 |-- lifebyte-laravel-project
     |-- src
-        |-- // Laravel project files
+        |-- ... // Laravel project files
     |-- .gitignore
     |-- README.md
     |-- ver.txt // Version tag file
-    |-- // Files for CI/CD
+    |-- ... // Files for CI/CD
 ```
 
 1. Go to the project root path
@@ -59,3 +59,20 @@ For ease of CI/CD, we will put Laravel files in */src* path, so the project file
    see [Development Standards - Laravel](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/development-standards.md)
 9. Write *README.md* in the root path by
    following [Documentation Standards](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/project-documentation-standards.md)
+
+## # CI/CD Files
+
+Work with DevOps team to create Docker-based CI/CD files in the root path. Normally should include following:
+
+```text
+|-- lifebyte-laravel-project
+    |-- .dockerignore // List of project files ignored when building CI/CD Docker container
+    |-- Dockerfile
+    |-- Dockerfile-base
+    |-- entrypoint.sh
+    |-- nginx-default.conf
+    |-- nginx-main.conf
+    |-- ... // Other project files
+```
+
+You can see sample CI/CD files in this project.
