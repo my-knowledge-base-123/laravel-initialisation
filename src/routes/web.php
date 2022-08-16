@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Web\PageController;
+use App\Http\Controllers\Web\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::namespace('App\Http\Controllers\Web')
+    ->group(function () {
+        Route::get('/', [PageController::class, 'home'])->name('pages.home');
+        Route::resource('users', UserController::class);
+    });
