@@ -11,6 +11,6 @@ class PageController extends Controller
 {
     public function home(): Factory|View|Application
     {
-        return view('welcome');
+        return view('pages.welcome');
     }
 }

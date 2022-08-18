@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Http\Resources\UserResource;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -17,7 +18,7 @@ class UserController extends Controller
 
     public function index(): AnonymousResourceCollection
     {
-        return $this->userService->getPaginatedUserCollection();
+        return UserResource::collection($this->userService->getUsers());
     }
 
     public function create()

@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Services\UserService;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    private UserService $userService;
+
+    public function __construct(UserService $userService)
+    {
+        $this->userService = $userService;
+    }
+
     public function index()
     {
-        //
+        return view('resources.users.index', ['users' => $this->userService->getUsers()]);
     }
 
     public function create()
