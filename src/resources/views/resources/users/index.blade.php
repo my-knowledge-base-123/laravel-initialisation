@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.the_app')
 
-    <title>User List</title>
+@section('title', 'User List')
 
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
-</head>
-<body class="antialiased">
-@foreach($users as $user)
-    <div>{{$user->name}}</div>
-@endforeach
-</body>
-</html>
+@section('content')
+    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        @foreach($users as $user)
+            <p class="block text-gray-600 dark:text-gray-400">{{$user->name}}</p>
+        @endforeach
+    </div>
+@endsection
