@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Http\Requests\UserRequest;
 use App\Services\UserService;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -24,7 +24,7 @@ class UserController extends Controller
         //
     }
 
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         //
     }
@@ -39,7 +39,7 @@ class UserController extends Controller
         //
     }
 
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, $id)
     {
         //
     }
