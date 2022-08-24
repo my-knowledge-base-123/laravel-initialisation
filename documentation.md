@@ -63,6 +63,7 @@ after initialisation.
 - [Development Standards](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/development-standards.md)
 - [IDE Settings Guide](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/ide-settings-guide.md)
 - [Tech Solutions](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/tech-solutions.md)
+- [Project Documentation Standards](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/project-documentation-standards.md)
 
 ### ## API Status Codes
 
