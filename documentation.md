@@ -17,46 +17,52 @@ after initialisation.
     ```shell
     cd path/to/project/src
     ```
-   
+
 3. Create `.env` file
 
    ```shell
    cp .env.example .env
    ```
-   
+
 4. Set environment variables in `.env`
-   
+
 5. Install dependencies
 
    ```shell
    composer install
    ```
-   
+
 6. Build Docker container & start a Bash session in the container
 
    ```shell
    ./vendor/bin/sail up -d && ./vendor/bin/sail shell
    ```
-   
+
 7. Re-install dependencies in the container CLI
 
    ```shell
    composer install
    ```
-   
+
 8. Generate application key
 
    ```shell
    php artisan key:generate
    ```
-   
+
 9. Run database migration and seeding
 
    ```shell
    php artisan migrate --seed
    ```
-   
+
 10. Open application in browser or test APIs with Postman
+
+### ## Developer Guides
+
+- [Development Standards](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/development-standards.md)
+- [IDE Settings Guide](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/ide-settings-guide.md)
+- [Tech Solutions](https://github.com/lifebyte-systems/lifebyte-web-development-standards/blob/main/laravel/tech-solutions.md)
 
 ### ## API Status Codes
 
