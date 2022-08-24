@@ -17,6 +17,6 @@ class UserRepository implements UserInterface
 
     public function all(): LengthAwarePaginator
     {
-        return $this->user->paginate();
+        return $this->user->recent()->paginate();
     }
 }

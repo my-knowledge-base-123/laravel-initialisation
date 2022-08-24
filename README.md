@@ -8,13 +8,14 @@ after initialisation.
 1. Create a new Git repository with your ***[PROJECT_NAME]***
 2. Create *.gitignore* file in the root path via [gitignore.io](https://www.toptal.com/developers/gitignore/), and
    ignore followings:
-	- Windows
-	- macOS
-	- Linux
-	- PhpStorm+all
-	- WebStorm+all
-	- VisualStudioCode
-	- SublimeText
+    - Laravel
+    - Windows
+    - macOS
+    - Linux
+    - PhpStorm+all
+    - WebStorm+all
+    - VisualStudioCode
+    - SublimeText
 
 ## # Initialise Laravel Project
 
@@ -124,16 +125,16 @@ Update composer scripts in `composer.json` to enable automation:
 ```json lines
 // ...
 "scripts": {
-    "post-update-cmd": [
-        // ...
-        "@ide-helper"
-    ],
-    // ...
-    "ide-helper": [
-        "@php artisan ide-helper:generate",
-        "@php artisan ide-helper:meta",
-        "@php artisan ide-helper:models -N"
-    ]
+"post-update-cmd": [
+// ...
+"@ide-helper"
+],
+// ...
+"ide-helper": [
+"@php artisan ide-helper:generate",
+"@php artisan ide-helper:meta",
+"@php artisan ide-helper:models -N"
+]
 }
 // ...
 ```
