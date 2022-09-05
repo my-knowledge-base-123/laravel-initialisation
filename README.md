@@ -32,7 +32,7 @@ For ease of CI/CD, we will put Laravel files in */src* path, so the project file
 ```
 
 1. Go to the project root path
-2. Initialise Laravel project with project name as `src`: `curl -s "https://laravel.build/src" | bash`
+2. Initialise Laravel project: `curl -s "https://laravel.build/src" | bash` (This will create a Laravel project under `/src`)
 3. Upsert following environment variables in `.env` and `.env.example`:
 
       ```dotenv
