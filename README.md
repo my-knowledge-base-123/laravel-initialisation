@@ -106,7 +106,7 @@ See [Official guide](https://laravel.com/docs/9.x/starter-kits#breeze-and-next)
 
 3. Create login request, and add the following code under its **Pre-request Script**:
 
-   ![img.png](doc-images/Screen Shot 2022-10-25 at 10.50.36 am.png)
+   ![img.png](./doc-images/Screen Shot 2022-10-25 at 10.50.36 am.png)
 
    ```
    pm.sendRequest({
@@ -121,8 +121,8 @@ See [Official guide](https://laravel.com/docs/9.x/starter-kits#breeze-and-next)
 
 4. Add request header: X-XSRF-TOKEN = {{xsrf-token}} and fill request body (form-data):
 
-   ![img.png](doc-images/Screen Shot 2022-10-25 at 10.50.05 am.png)
-   ![img.png](doc-images/Screen Shot 2022-10-25 at 10.50.14 am.png)
+   ![img.png](./doc-images/Screen Shot 2022-10-25 at 10.50.05 am.png)
+   ![img.png](./doc-images/Screen Shot 2022-10-25 at 10.50.14 am.png)
 
 5. Make request to /login. This time. Check Postman environment, an new environment ```xsrf-token``` is set, which is equal to the value of ```XSRF-TOKEN``` in the cookies.
 
